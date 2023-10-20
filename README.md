@@ -16,28 +16,22 @@ Safe Data Leakage via Application Background Screenshot and Prevent Screenshot f
 await ScreenProtector.protectDataLeakageWithImage('LaunchImage');
 ```
 
-- Protect data leakage with color ON
+- Protect data leakage with color
 
 ```dart
 await ScreenProtector.protectDataLeakageWithColor(Colors.white);
 ```
 
-- Protect data leakage with color OFF
-
-```dart
-await ScreenProtector.protectDataLeakageWithColorOff();
-```
-
-- Protect data leakage with blur ON
+- Protect data leakage with blur
 
 ```dart
 await ScreenProtector.protectDataLeakageWithBlur();
 ```
 
-- Protect data leakage with blur OFF
+- Protect data leakage off
 
 ```dart
-await ScreenProtector.protectDataLeakageWithBlurOff();
+await ScreenProtector.protectDataLeakageOff();
 ```
 
 #### Prevent Screenshot

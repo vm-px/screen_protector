@@ -55,7 +55,7 @@ class ScreenProtector {
     return await _channel.invokeMethod('protectDataLeakageOn');
   }
 
-  /// Supported for Android only, do nothing when run on iOS.
+  /// Supported for Android and iOS.
   static Future<void> protectDataLeakageOff() async {
     return await _channel.invokeMethod('protectDataLeakageOff');
   }
@@ -63,11 +63,6 @@ class ScreenProtector {
   /// Supported for iOS only, do nothing when run on Android.
   static Future<void> protectDataLeakageWithBlur() async {
     return await _channel.invokeMethod('protectDataLeakageWithBlur');
-  }
-
-  /// Supported for iOS only, do nothing when run on Android.
-  static Future<void> protectDataLeakageWithBlurOff() async {
-    return await _channel.invokeMethod('protectDataLeakageWithBlurOff');
   }
 
   /// Supported for iOS only, do nothing when run on Android.
@@ -82,11 +77,6 @@ class ScreenProtector {
     return await _channel.invokeMethod('protectDataLeakageWithColor', {
       'hexColor': color.toHex(),
     });
-  }
-
-  /// Supported for iOS only, do nothing when run on Android.
-  static Future<void> protectDataLeakageWithColorOff() async {
-    return await _channel.invokeMethod('protectDataLeakageWithColorOff');
   }
 
   /// Supported for Android and iOS.

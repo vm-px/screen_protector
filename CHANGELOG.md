@@ -1,3 +1,9 @@
+## 2.0.0
+
+* feat(ios): implement protectDataLeakageOff method
+* fix(ios): missing disabling image protection screen when calling protectDataLeakageOff in background
+* **Breaking Change** [iOS] Replace all protectDataLeakage specific methods with protectDataLeakageOff
+
 ## 1.4.1
 
 * fix(ios): missing disabling of protection screens when calling protectDataLeakage off methods in inactive app state
