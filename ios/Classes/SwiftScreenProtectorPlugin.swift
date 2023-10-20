@@ -71,11 +71,6 @@ public class SwiftScreenProtectorPlugin: NSObject, FlutterPlugin {
             enabledProtectDataLeakageWithBlur = .on
             result(true)
             break
-        case "protectDataLeakageWithBlurOff":
-            enabledProtectDataLeakageWithBlur = .off
-            screenProtectorKit?.disableBlurScreen()
-            result(true)
-            break
         case "protectDataLeakageWithImage":
             if args != nil {
                 protectDataLeakageWithImageName = args!["name"] ?? "LaunchImage"
@@ -91,9 +86,13 @@ public class SwiftScreenProtectorPlugin: NSObject, FlutterPlugin {
             }
             result(true)
             break
-        case "protectDataLeakageWithColorOff":
+        case "protectDataLeakageOff":
             enabledProtectDataLeakageWithColor = .off
+            enabledProtectDataLeakageWithImage = .off
+            enabledProtectDataLeakageWithBlur = .off
             screenProtectorKit?.disableColorScreen()
+            screenProtectorKit?.disableImageScreen()
+            screenProtectorKit?.disableBlurScreen()
             result(true)
             break
         case "preventScreenshotOn":
